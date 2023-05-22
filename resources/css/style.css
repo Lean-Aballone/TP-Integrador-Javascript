@@ -556,18 +556,21 @@ section#section_b{
 }
 
 .box:hover{
-    background: linear-gradient(0deg, #87efff, transparent) #f095f8;
     cursor: pointer;
 }
 
-.box:nth-child(1):hover{
+.box:nth-child(1):hover, .bx_s1{
     box-shadow: -6px 4px 6px 3px rgba(49, 49, 56, 0.5);
 }
-.box:nth-child(2):hover{
+.box:nth-child(2):hover, .bx_s2{
     box-shadow: 0px 4px 6px 3px rgba(49, 49, 56, 0.5);
 }
-.box:nth-child(3):hover{
+.box:nth-child(3):hover, .bx_s3{
     box-shadow: 6px 4px 6px 3px rgba(49, 49, 56, 0.5);
+}
+
+.box_selected{
+    background: linear-gradient(0deg, #87efff, transparent) #f095f8;
 }
 
 

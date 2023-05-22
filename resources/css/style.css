@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+
+html,
+body {
+    padding: 0 0;
+    margin: 0 0;
+    font-family: 'Hind', sans-serif;
+}
+
+body{
+    font-weight: 400;
+    font-size: clamp(0.4rem, 1vw ,1.8rem);
+    width: 100%;
+    background-color: white;
+}
+
+.main_container{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_container .container {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 100%;
+    align-items: center;
+    background-color: #353a40;
+    display: flex;
+    height: 4.75rem;
+    justify-content: space-between;
+    left: 0;
+    min-width: 10rem;
+    right: 0;
+    z-index: 100;
+}
+
+.header-left{
+    margin-left: clamp(1px, 0.5vw ,40px);
+    flex-shrink: 10;
+    flex-grow: 0;
+    margin-right: 0;
+    display: flex;
+    height: inherit;
+    flex: 0 1 13.75rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h3#Conf {
+    margin: 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    padding: 0;
+    width: 8.5rem;
+    width: max-content;
+}
+
+.header-right{
+    flex-shrink: 1;
+    flex-grow: 10;
+}
+
+.nav-ul {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: right;    
+}
+
+figure.header-left > img {
+    max-width: clamp(0.8rem, 10vw, 8rem);
+    height: auto;
+}
+
+figure.header-left > img:hover {
+    filter: invert(100%) drop-shadow(5px 6px 1px #222);
+}
+
+li > a {
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    font-weight: 500;
+    text-decoration: none;
+    color: #9b9d9c;
+    display: inline-block;
+    padding: 0.6rem;
+}
+
+#Compra {
+    margin-left: 0;
+    margin-right: 1.56rem;
+    color: #48a73a;
+}
+
+/* Navbar animation */
+
+#Compra {
+    margin-left: 0;
+    margin-right: max(0.1rem, 25px);
+    color: #48a73a;
+}
+
+li > a:focus,
+li > a:hover,
+li > a:active {
+    color: #fff;
+    border-radius: 0.8em;
+    background-color: rgba(150, 150, 150, 0.3);
+}
+
+#Compra:focus,
+#Compra:hover,
+#Compra:active {
+    color: #00CC00;
+}
+
+/* End of Navbar animation */
+
+
+/* Main Section A */
+section#section_a{
+    background-image: url("css-images/ba1.jpg");
+    background-repeat: no-repeat;
+    height: clamp(300px,30vw,1080px);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: local;
+    background-attachment: scroll;
+    background-position: 0% 83%;
+    animation: 50s linear infinite bg-img;
+
+}
+@keyframes bg-img {
+
+    0%{
+        background-image: url("css-images/ba1.jpg");
+        animation-timing-function: step-end;
+    }
+
+    25%, 75% {
+        background-image: url("css-images/ba3.jpg");
+        animation-timing-function: step-start;
+    }
+
+    100% {
+        background-image: url("css-images/ba1.jpg");
+        animation-timing-function: step-start;
+    }
+}
+
+#section_a div{ 
+    color: white;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#section_a div{
+    animation: Pan-in 3s ease-out;
+  }
+@keyframes Pan-in {
+    from { width: 0%;}
+    to   { width: 100%;}
+  }
+
+#section_a div article {
+    padding-left: 5%;
+    text-align: right;
+    width: 50%;
+    padding-bottom: 3%;
+    opacity: 0;
+    animation-direction: normal;
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+}
+  @keyframes fadein {
+    100%{ opacity: 1;}
+}
+
+#section_a div article h1 {
+    margin-bottom: 0;
+    font-size: clamp(1.8rem,2.5vw,5rem);
+    text-align: right;
+}
+
+#section_a div article p {
+    font-size: clamp(0.5rem, 1vw ,1.5rem);
+    font-weight: 400;
+}
+
+article button {
+    text-align: right;
+    background-color: transparent;
+    border: none;
+}
+
+article button a {
+    margin-bottom: 2vw;
+    font-size: clamp(0.8rem, 1.2vw, 5rem);
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 0.3rem;
+}
+
+article button a:hover,
+article button a:focus{
+    background-color: rgba(255,255,255,0.2);
+    outline: double rgba(255,255,255,0.6);
+    text-decoration: underline;
+}
+
+button a#Compra_Tickets_Button {
+    background-color: #29a744;
+    border: none;
+}
+
+
+
+/* End of Main Section A */
+
+
+
+/* Main Section B*/
+section#section_b{
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    height: 10%;
+}
+
+#section_b p {
+    margin: 0;
+    padding: 0;
+}
+
+#section_b strong{
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+#section_b .card_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: content-box;
+}
+
+#section_b .card_container .card {
+    margin: auto 1%;
+    max-width: 25%;
+    border-radius: 0.3rem;
+    border: 3px solid #dfdfdf;
+    display: flex;
+    flex-direction: column;
+}
+
+.card figure{
+    margin: 0;
+    width: 100%;
+    object-fit: fill;
+}
+
+.card figure img{
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.card article {
+    font-size: clamp(0.8rem, 1.1vw, 1.0rem);
+    padding: 1rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.card article h3 {
+    font-size: clamp(1.3rem, 1.8vw, 3.3rem);
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.JS, .React, .Negocios, .Startups {
+    background-color: #ffc108;
+    color: black;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.4rem;
+    margin-left: 0;
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.React {
+    color: white;
+    background-color: #17a2b9;
+}
+
+.Negocios{
+    color: white;
+    background-color: #6b757f;
+}
+
+.Startups{
+    color: white;
+    background-color: #dc3546;
+}
+
+
+/* End of Main Section B */
+
+/* Main Section C*/
+#section_c{
+    display: flex;
+    background-color: #353a40;
+    padding: 0 0;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+#section_c div {
+    
+    display: flex;
+    width: 100%;
+    height: calc(300px, 1vw, 2000px);
+}
+
+#section_c figure{
+    border: 1px solid white;
+    margin: 0 0;
+    flex-grow: 0;
+    width: 50%;
+    flex-shrink: 1;    
+    object-fit:scale-down;
+}
+
+#section_c figure img{
+    width: 100%;
+    height: 100%; 
+    padding: 0 0;
+    margin: 0 0;
+    object-fit:fill;
+}
+
+#section_c article{
+    border: 1px solid white;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-top: 0;
+    color: white;
+    padding: 0.5rem 1rem;
+    width: 50%;    
+    flex-shrink: 0;
+}
+
+#section_c article h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#section_c article p{
+    margin-top: 0;
+    font-size: clamp(0.8rem, 1vw ,1.5rem);
+}
+
+#section_c article button{
+    font-size: clamp( 1rem, 1.5vw , 2.5rem);
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    padding: 0 0;
+}
+
+/* End of Main Section C */
+
+/* Main Section D */
+#section_d{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#section_d div h5 {
+    font-size: clamp( 0.5rem, 1vw , 1rem);
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#section_d div h3{
+    font-size: clamp(0.8rem, 6vw , 2.5rem);
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#section_d div p {
+    font-size: clamp( 1rem, 1vw , 2.5rem);
+    margin: 0 5rem;
+}
+
+#section_d div div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#section_d div div button {
+    font-size: clamp( 1rem, 1.5vw , 2.5rem);
+    color: white;
+    border-radius: 0.3rem;
+    text-align: center;
+    background-color: #96c93e;
+    border: none;
+    padding: 0 0;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#section_d div div button a {
+    display: block;
+    font-size: clamp(1.1rem, 1.2vw, 5rem);
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+#section_d div div section{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1rem 5%;
+    margin-bottom: 1rem;
+}
+
+#name,#surname{
+    flex-grow: 1;
+    border: 2px solid #cdd4da;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+
+#comment{
+    border: 2px solid #cdd4da;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    font-size: clamp( 1rem, 1vw , 2.5rem);
+    margin: 0;
+    width: 100%;
+    height: 8vw;
+}
+
+/* End of Main Section D */
+
+/* End of Main */
+
+footer .main_container div.container{
+    width: 100%;
+    padding: 0 0;
+    margin: 0 0;
+    background-color: #1d3947;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+footer .main_container div.container .nav-ul{
+    width: 100%;
+    flex-grow: 10;
+}
+
+footer .main_container div.container .nav-ul li a{
+    color: white;
+}
+
+
+
+

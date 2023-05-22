@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/style-2.css">
+    <link rel="shortcut icon" href="resources/images/codoacodo.ico" type="image/x-icon">
+    <title>Conf Bs As</title>
+</head>
+<body>
+    <header class="fixed">
+        <div class="main_container">
+            <div class="container">
+                <div class="header-left">
+                    <figure class="header-left"><a href="./index.html"><img class="img_logo" src="resources/images/codoacodo.png" alt="Logo Codo a Codo"></a><span><h3 id="Conf">Conf Bs As</h3></span></figure>
+                </div>
+                <div class="header-right">
+                    <div class="Button">
+                        <a href="./tickets.html" class="nav2">
+                            <div class="close_extra" id="one"></div>
+                            <div class="close_one"></div>
+                            <div class="close_two"></div>
+                            <div class="close_extra" id="three"></div>
+                        </a>
+                    </div>
+                    <nav>
+                        <ul class="nav-ul">
+                            <li><a href="./index.html">La conferencia</a></li>
+                            <li><a href="./index.html#section_b">Los oradores</a></li>
+                            <li><a href="./index.html#section_c">El lugar y la fecha</a></li>
+                            <li><a href="./index.html#section_d">Conviértete en orador</a></li>
+                            <li><a id="Compra" href="./tickets.html" title="Redireccionamiento a web de compra de tickets">Comprar tickets</a></li>
+                        </ul>
+                    </nav>
+                </div> 
+            </div>            
+        </div>
+    </header>
+    <main>
+        <div class="main_container minviewport">
+            <section id="section_a">
+                <div>
+                    <article>
+                        <h1>Conf Bs As</h1>
+                        <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                        <button disabled><a href="#" title="Formulario de Inscripción">Quiero ser orador</a></button>
+                        <button disabled><a href="./tickets.html" title="Redireccionamiento a web de compra de tickets" id="Compra_Tickets_Button">Comprar tickets</a></button>
+                    </article>
+                </div>
+            </section>
+            <section id="section_b">
+                <p>CONOCE A LOS <br><strong>ORADORES</strong></p> 
+                <div class="card_container">
+                    <div class="card">
+                        <img src="resources/images/steve.jpg" alt="Steve Jobs">
+                        <article>
+                            <span class="JS">Javascript</span><span class="React">React</span>
+                            <h3>Steve Jobs</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse et ratione laudantium molestias hic saepe quo tenetur! Architecto voluptas quidem laborum, amet recusandae voluptates in adipisci corporis itaque minus magnam.</p>
+                        </article>
+                    </div>
+                    <div class="card">
+                        <img src="resources/images/bill.jpg" alt="Bill Gates">
+                        <article>
+                            <span class="JS">Javascript</span><span class="React">React</span>
+                            <h3>Bill Gates</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus vel illum quas aliquam veritatis magnam error doloremque natus quod illo nobis asperiores ducimus ullam assumenda officiis fuga beatae, rem sint.</p>
+                        </article>
+                    </div>
+                    <div class="card">
+                        <img src="resources/images/ada.jpeg" alt="Ada Lovelace">
+                        <article>
+                            <span class="Negocios">Negocios</span><span class="Startups">Startups</span>
+                            <h3>Ada Lovelace</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos et quia at explicabo, corrupti cum quam magnam dolor rerum ipsam. Atque iure modi nemo eaque error quam nihil enim consequuntur.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="section_c">
+                <div>
+                    <figure><img src="resources/css/css-images/honolulu.jpg" alt="honolulu">
+                    </figure>
+                    <article>
+                        <h2>Bs As - Octubre</h2>
+                        <p>Buenos Aires es la provincia y localidad mås grande del estado de Argentina, en los Estados Unidos. Honolulu es la
+                            más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área
+                            urbana en Ia costa sureste de Ia isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad
+                            condado consolidada que cubre toda la ciudad (aproximadamente 600 km<sup>2</sup> de superficie).</p>
+                        <button disabled><a href="#">Conocé más</a></button>
+                    </article>
+                </div>
+            </section>
+            <section id="section_d">
+                    <h5>CONVIÉRTETE EN UN</h5>
+                    <h3>ORADOR</h3>
+                    <p>Anótate como orador para dar una <span><abbr title="Presentación de la idea central de un proyecto o visión en cinco minutos.">charla ignite</abbr></span>. Cuéntanos de qué quieres hablar!</p>
+                    <div>
+                       
+                            <input type="text" placeholder="Nombre" name="name" id="name" required>
+                            <input type="text" placeholder="Apellido" name="surname" id="surname" required>
+                        
+                        <textarea type="text" id="comment" name="comment" id="comment" cols="30" rows="10"placeholder="Sobre qué quieres hablar?" required></textarea>
+                    </div>
+                        <small style="font-weight: lighter; opacity: .6;">Recuerda incluir un título para tu charla</small>
+                        <button disabled type="submit"><a href="#name">Enviar</a></button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="main_container">
+            <div class="container">
+                <nav>
+                    <ul class="nav-ul">
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Prensa</a></li>
+                        <li><a href="#">Conferencias</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Estudiantes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

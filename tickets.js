@@ -66,18 +66,38 @@ const PRECIO = document.querySelector("#precio");
 ); 
  */
 SELECT.addEventListener("change", function(){UpdatePrecio();});
+
 ESTUDIANTE_BOX.addEventListener("click",function(){
-    SELECT.selectedIndex = 1;
-    UpdatePrecio();
+    if(SELECT.selectedIndex === 1){
+        ESTUDIANTE_BOX.classList.remove("box_selected","bx_s1");
+        SELECT.selectedIndex = 0;
+        UpdatePrecio();
+    }else {
+        SELECT.selectedIndex = 1;
+        UpdatePrecio();
+    }
+    
 });
 
-TRAINEE_BOX.addEventListener("click",function(){
-    SELECT.selectedIndex = 2;
-    UpdatePrecio();
+TRAINEE_BOX.addEventListener("click" || "focus",function(){
+    if(SELECT.selectedIndex === 2){
+        ESTUDIANTE_BOX.classList.remove("box_selected","bx_s2");
+        SELECT.selectedIndex = 0;
+        UpdatePrecio();
+    }else {
+        SELECT.selectedIndex = 2;
+        UpdatePrecio();
+    }
 });
 
 JUNIOR_BOX.addEventListener("click",function(){
-    SELECT.selectedIndex = 3;
-    UpdatePrecio();
+    if(SELECT.selectedIndex === 3){
+        ESTUDIANTE_BOX.classList.remove("box_selected","bx_s3");
+        SELECT.selectedIndex = 0;
+        UpdatePrecio();
+    }else {
+        SELECT.selectedIndex = 3;
+        UpdatePrecio();
+    }
 });
 

@@ -535,6 +535,15 @@ section#section_b{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+button.box{
+    font-family: 'Hind', sans-serif;
+    font-size: clamp(0.4rem, 1vw ,1.8rem);
+    display: block;
+    padding: 1em;
+    border: 1px solid #17a2b8;
+    background: transparent;
+    box-shadow: none;
+}
 .box{
     aspect-ratio: 1/1;
     border: 1px solid #17a2b8;
@@ -559,6 +568,8 @@ section#section_b{
     cursor: pointer;
 }
 
+
+
 .box:nth-child(1):hover, .bx_s1{
     box-shadow: -6px 4px 6px 3px rgba(49, 49, 56, 0.5);
 }
@@ -569,7 +580,7 @@ section#section_b{
     box-shadow: 6px 4px 6px 3px rgba(49, 49, 56, 0.5);
 }
 
-.box_selected{
+button.box_selected{
     background: linear-gradient(0deg, #87efff, transparent) #f095f8;
 }
 

@@ -24,7 +24,38 @@ body{
     background-color: white;
 }
 
+.fixed{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9000;
+}
+
+.bottom{
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 9000;
+}
+
+.minviewport{
+    margin-top: 4.75rem;
+    min-height: calc(100dvh - (4.75rem)*2);
+}
+
+.fullviewport{
+    position: relative;
+    min-height: 100lvh;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .main_container{
+    
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -82,12 +113,12 @@ h3#Conf {
     justify-content: right;    
 }
 
-figure.header-left > img {
+.img_logo {
     max-width: clamp(0.8rem, 10vw, 8rem);
     height: auto;
 }
 
-figure.header-left > img:hover {
+.img_logo:hover {
     filter: invert(100%) drop-shadow(5px 6px 1px #222);
 }
 
@@ -132,10 +163,24 @@ li > a:active {
 
 
 /* Main Section A */
+
+
+input, select {
+    color: #757575;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 1rem;
+    border: 2px solid #cdd4da;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+
+
 section#section_a{
     background-image: url("css-images/ba1.jpg");
     background-repeat: no-repeat;
     height: clamp(300px,30vw,1080px);
+    height: 70lvh;
     margin: 0;
     padding: 0;
     background-size: cover;
@@ -169,7 +214,7 @@ section#section_a{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
-    padding-right: 5%;
+    padding-right: 8.5%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -206,7 +251,7 @@ section#section_a{
 }
 
 #section_a div article p {
-    font-size: clamp(0.5rem, 1vw ,1.5rem);
+    font-size: clamp(0.5rem, 1.5vw ,1.5rem);
     font-weight: 400;
 }
 
@@ -248,15 +293,18 @@ button a#Compra_Tickets_Button {
 
 /* Main Section B*/
 section#section_b{
+    /* font-size: 0.8rem; */
     background-color: white;
-    padding: 1rem;
+    margin: 1rem 13%;
     text-align: center;
-    height: 10%;
 }
 
 #section_b p {
     margin: 0;
     padding: 0;
+    
+
+
 }
 
 #section_b strong{
@@ -265,36 +313,29 @@ section#section_b{
 }
 
 #section_b .card_container{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1em;
+    margin: 1rem 13%;
+    
 }
 
 #section_b .card_container .card {
-    margin: auto 1%;
-    max-width: 25%;
     border-radius: 0.3rem;
     border: 3px solid #dfdfdf;
-    display: flex;
-    flex-direction: column;
 }
 
-.card figure{
-    margin: 0;
-    width: 100%;
+.card img{
+    image-resolution: 645px 645;
+    aspect-ratio: 1/1;
     object-fit: fill;
-}
-
-.card figure img{
-    min-width: 100%;
+    width: 345px;
     max-width: 100%;
-    height: auto;
 }
 
 .card article {
     font-size: clamp(0.8rem, 1.1vw, 1.0rem);
-    padding: 1rem;
+    padding: 1em;
     text-align: left;
     overflow: hidden;
 }
@@ -407,14 +448,10 @@ section#section_b{
 
 /* Main Section D */
 #section_d{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
+    margin: 0 21%;
 }
 
-#section_d div h5 {
+#section_d h5 {
     font-size: clamp( 0.5rem, 1vw , 1rem);
     font-weight: 300;
     padding: 0;
@@ -423,7 +460,7 @@ section#section_b{
     text-align: center;
 }
 
-#section_d div h3{
+#section_d h3{
     font-size: clamp(0.8rem, 6vw , 2.5rem);
     font-weight: 600;
     padding: 0;
@@ -431,18 +468,22 @@ section#section_b{
     text-align: center;
 }
 
-#section_d div p {
+#section_d p {
     font-size: clamp( 1rem, 1vw , 2.5rem);
-    margin: 0 5rem;
+    text-align: center;
 }
 
-#section_d div div {
+#section_d div{
     display: flex;
-    flex-direction: column;
-    text-align: left;
+    flex-wrap: wrap;
+    gap: 1rem 0.5rem;
 }
 
-#section_d div div button {
+#section_d > div > input{
+    flex: 2 1 48%;
+}
+
+#section_d button {
     font-size: clamp( 1rem, 1.5vw , 2.5rem);
     color: white;
     border-radius: 0.3rem;
@@ -454,7 +495,7 @@ section#section_b{
     margin-bottom: 1rem;
 }
 
-#section_d div div button a {
+#section_d button a {
     display: block;
     font-size: clamp(1.1rem, 1.2vw, 5rem);
     font-weight: 500;
@@ -466,20 +507,6 @@ section#section_b{
     width: 100%;
 }
 
-#section_d div div section{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    gap: 1rem 5%;
-    margin-bottom: 1rem;
-}
-
-#name,#surname{
-    flex-grow: 1;
-    border: 2px solid #cdd4da;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-}
 
 #comment{
     border: 2px solid #cdd4da;
@@ -487,13 +514,139 @@ section#section_b{
     padding: 1rem;
     font-size: clamp( 1rem, 1vw , 2.5rem);
     margin: 0;
-    width: 100%;
+    flex-basis: 100%;
     height: 8vw;
 }
 
 /* End of Main Section D */
 
+/* Main section E */
+
+#section_e{
+    margin-inline: 21%;
+    text-align: center;
+}
+
+#section_e > header{
+    font-size: 1rem;
+    margin: 1em 0;
+    display: inline-grid;
+    gap: 0.38em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box{
+    aspect-ratio: 1/1;
+    border: 1px solid #17a2b8;
+    margin: auto;
+    padding: 1em;
+}
+
+.box > b {
+    display: block;
+    margin: 1em auto;
+}
+
+.box:first-child{
+    border: 1px solid #007bff;
+}
+
+.box:last-child{
+    border: 1px solid #ffc107;
+}
+
+.box:hover{
+    background: linear-gradient(0deg, #87efff, transparent) #f095f8;
+    cursor: pointer;
+}
+
+.box:nth-child(1):hover{
+    box-shadow: -6px 4px 6px 3px rgba(49, 49, 56, 0.5);
+}
+.box:nth-child(2):hover{
+    box-shadow: 0px 4px 6px 3px rgba(49, 49, 56, 0.5);
+}
+.box:nth-child(3):hover{
+    box-shadow: 6px 4px 6px 3px rgba(49, 49, 56, 0.5);
+}
+
+
+
+#section_e > main {
+    font-size: 1.3rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.0em 0.8rem;
+}
+
+#section_e > main > p,h3{
+    margin: 0;
+}
+
+#section_e > header > div > small{
+    font-weight: 100;
+}
+
+#section_e > main > *:not(.half){
+    flex-basis: 100%;
+}
+
+#section_e > main > input{
+    font-size: 1.2rem;
+}
+
+.half{
+    flex: 1 10 40%;
+}
+.algn_left{
+    text-align: left;
+}
+
+.half > input {
+    width: fit-content;
+    display: block;
+}
+
+#total_box{
+    margin: 1rem 0;
+    padding: 1rem;
+    padding-left: 2rem;
+    font-weight: 100;
+    text-align: left;
+    color: #0040a5;
+    border: 1px solid #b8daff;
+    background-color: #cce5ff;
+    border-radius: 0.3rem;
+}
+
+#section_e > main button {
+    font-size: clamp( 1rem, 1.5vw , 2.5rem);
+    color: white;
+    border-radius: 0.3rem;
+    text-align: center;
+    background-color: #96c93e;
+    border: none;
+    padding: 0 0;
+    margin-bottom: 1rem;
+}
+
+#section_e > main button a {
+    display: block;
+    font-size: clamp(1.1rem, 1.2vw, 5rem);
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 0.3rem;
+}
+
+
+/* End of Main Section E */
+
+
 /* End of Main */
+
 
 footer .main_container div.container{
     width: 100%;

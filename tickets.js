@@ -168,11 +168,11 @@ function generar_ticket(){
     PRINT.appendChild(p);
     PRINT.appendChild(hr);
 
-
+    hr = document.createElement("hr");
     p = document.createElement("p");
     p.textContent = "Precio Final: $" + PRECIO.innerHTML;
     PRINT.appendChild(p);
-
+    PRINT.appendChild(hr);
 
 
     primer_resumen = false;
@@ -180,8 +180,15 @@ function generar_ticket(){
 
 BTN_RESUMEN.addEventListener("click",function(){
 
+
     if(primer_resumen){
         generar_ticket();
+
+        var win = window.open("", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600,top="+(screen.height-600)+",left="+(screen.width-840));
+        win.document.body.innerHTML = PRINT.innerHTML;
+
+
+
     }else{
 
         while(PRINT.firstChild){

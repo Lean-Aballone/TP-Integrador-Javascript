@@ -294,7 +294,6 @@ button a#Compra_Tickets_Button {
 
 /* Main Section B*/
 section#section_b{
-    /* font-size: 0.8rem; */
     background-color: white;
     margin: 1rem 13%;
     text-align: center;
@@ -303,9 +302,6 @@ section#section_b{
 #section_b p {
     margin: 0;
     padding: 0;
-    
-
-
 }
 
 #section_b strong{
@@ -318,7 +314,6 @@ section#section_b{
     grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: 1em;
     margin: 1rem 13%;
-    
 }
 
 #section_b .card_container .card {
@@ -547,7 +542,6 @@ button.box_1{
 
 button.box{
     font-family: 'Hind', sans-serif;
-    /* font-size: clamp(0.4rem, 1vw ,1.8rem); */
     display: block;
     padding: 1em;
     border: 1px solid #17a2b8;

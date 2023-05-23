@@ -32,7 +32,6 @@ function CalcularDescuento(categoria, TICKET){
 }
 
 function UpdatePrecio(){
-   /*  console.log(CalcularDescuento(SELECT.options[SELECT.selectedIndex].text)); */
     let categoria = SELECT.options[SELECT.selectedIndex].text;
     PRECIO.innerHTML = CalcularDescuento(categoria, PRECIO_TICKET);
 

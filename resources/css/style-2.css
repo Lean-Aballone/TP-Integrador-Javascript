@@ -41,7 +41,6 @@
         
         max-height: 0;
         overflow: hidden;
-        
         min-height: 0; 
         display: flex;
         flex-wrap: wrap;
@@ -64,7 +63,6 @@
     }
 
     .hidden{
-
         display: none;
     }
 
@@ -137,13 +135,10 @@
         top: -27px;
     }
 
-
-
     .nav2_opened#one,
     .nav2_opened#three{
         display: none;
     }
-
 
     .cross_one {
         top: 9px;
@@ -342,8 +337,6 @@
     }
 
 }
-
-
 
 @media (max-width: 375px){
 

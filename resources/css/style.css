@@ -48,6 +48,7 @@ body{
     min-height: 100lvh;
 }
 
+
 .footer{
     position: absolute;
     bottom: 0;
@@ -535,9 +536,18 @@ section#section_b{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+button.box_1{
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
 button.box{
     font-family: 'Hind', sans-serif;
-    font-size: clamp(0.4rem, 1vw ,1.8rem);
+    /* font-size: clamp(0.4rem, 1vw ,1.8rem); */
     display: block;
     padding: 1em;
     border: 1px solid #17a2b8;
@@ -550,6 +560,8 @@ button.box{
     margin: auto;
     padding: 1em;
 }
+
+
 
 .box > b {
     display: block;
@@ -634,7 +646,7 @@ button.box_selected{
 }
 
 #section_e > main button {
-    font-size: clamp( 1rem, 1.5vw , 2.5rem);
+    font-size: clamp( 1.1rem, 1.2vw , 5rem);
     color: white;
     border-radius: 0.3rem;
     text-align: center;
@@ -642,19 +654,8 @@ button.box_selected{
     border: none;
     padding: 0 0;
     margin-bottom: 1rem;
-}
-
-#section_e > main button a {
-    display: block;
-    font-size: clamp(1.1rem, 1.2vw, 5rem);
-    font-weight: 500;
-    text-decoration: none;
-    color: white;
     padding: 0.5rem;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 0.3rem;
 }
-
 
 /* End of Main Section E */
 

@@ -1,18 +1,25 @@
 function CalcularDescuento(categoria, TICKET){
+    let cant = Number(document.querySelector("#cantidad").value);
+
+    if (cant > 99 || cant <= 0) {
+        cant.preventDefault();
+        return;
+    }
+
     const DEST_ESTUDIANTE = 80 / 100;
     const DEST_TRAINEE = 50 / 100;
     const DEST_JUNIOR = 15 / 100;
     switch(categoria){
         case "Estudiante":
-            return TICKET - TICKET * DEST_ESTUDIANTE;
+            return (TICKET - TICKET * DEST_ESTUDIANTE) * cant;
             break;
 
         case "Trainee":
-            return TICKET - TICKET * DEST_TRAINEE;            
+            return (TICKET - TICKET * DEST_TRAINEE) * cant;            
             break;
 
         case "Junior":
-            return TICKET - TICKET * DEST_JUNIOR;            
+            return (TICKET - TICKET * DEST_JUNIOR) * cant;            
             break;
 
         default:
@@ -51,7 +58,6 @@ function UpdatePrecio(){
     }
 }
 
-
 const PRECIO_TICKET = Number(document.querySelector("#ticket").innerHTML);
 const SELECT = document.querySelector("#categoria");
 const ESTUDIANTE_BOX= document.querySelector("#Estudiante");
@@ -65,8 +71,8 @@ const PRECIO = document.querySelector("#precio");
     }document.querySelector('#categoria')
 ); 
  */
-SELECT.addEventListener("change", function(){UpdatePrecio();});
-
+/* SELECT.addEventListener("change", function(){UpdatePrecio();}); */
+SELECT.addEventListener("change",UpdatePrecio);
 ESTUDIANTE_BOX.addEventListener("click",function(){
     if(SELECT.selectedIndex === 1){
         ESTUDIANTE_BOX.classList.remove("box_selected","bx_s1");

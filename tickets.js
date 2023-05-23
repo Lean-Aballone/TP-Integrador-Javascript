@@ -2,8 +2,8 @@ function CalcularDescuento(categoria, TICKET){
     let cant = Number(document.querySelector("#cantidad").value);
 
     if (cant > 99 || cant <= 0) {
-        cant.preventDefault();
-        return;
+        document.querySelector("#cantidad").value = 1;
+        cant = Number(document.querySelector("#cantidad").value);
     }
 
     const DEST_ESTUDIANTE = 80 / 100;
@@ -66,12 +66,6 @@ const JUNIOR_BOX = document.querySelector("#Junior");
 const PRECIO = document.querySelector("#precio");
 
 
-/*  document.querySelector('#categoria').addEventListener("change", function() {
-        PRECIO.innerHTML = CalcularDescuento(SELECT.options[SELECT.selectedIndex].text);
-    }document.querySelector('#categoria')
-); 
- */
-/* SELECT.addEventListener("change", function(){UpdatePrecio();}); */
 SELECT.addEventListener("change",UpdatePrecio);
 ESTUDIANTE_BOX.addEventListener("click",function(){
     if(SELECT.selectedIndex === 1){
@@ -85,9 +79,9 @@ ESTUDIANTE_BOX.addEventListener("click",function(){
     
 });
 
-TRAINEE_BOX.addEventListener("click" || "focus",function(){
+TRAINEE_BOX.addEventListener("click",function(){
     if(SELECT.selectedIndex === 2){
-        ESTUDIANTE_BOX.classList.remove("box_selected","bx_s2");
+        TRAINEE_BOX.classList.remove("box_selected","bx_s2");
         SELECT.selectedIndex = 0;
         UpdatePrecio();
     }else {
@@ -98,7 +92,7 @@ TRAINEE_BOX.addEventListener("click" || "focus",function(){
 
 JUNIOR_BOX.addEventListener("click",function(){
     if(SELECT.selectedIndex === 3){
-        ESTUDIANTE_BOX.classList.remove("box_selected","bx_s3");
+        JUNIOR_BOX.classList.remove("box_selected","bx_s3");
         SELECT.selectedIndex = 0;
         UpdatePrecio();
     }else {
@@ -107,3 +101,17 @@ JUNIOR_BOX.addEventListener("click",function(){
     }
 });
 
+
+const BTN_BORRAR = document.querySelector("#borrar");
+
+BTN_BORRAR.addEventListener("click",function(){
+    SELECT.selectedIndex = 0;
+    ESTUDIANTE_BOX.classList.remove("box_selected","bx_s1");
+    TRAINEE_BOX.classList.remove("box_selected","bx_s2");
+    JUNIOR_BOX.classList.remove("box_selected","bx_s3");
+    UpdatePrecio();
+    document.querySelectorAll("input").forEach(Element => {Element.value= ''});
+    document.querySelector("#cantidad").value = 1;
+});
+
+/* const RESUMEN = document.querySelector(#) */

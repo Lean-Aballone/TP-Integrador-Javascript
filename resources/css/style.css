@@ -655,6 +655,7 @@ button.box_selected{
     padding: 0 0;
     margin-bottom: 1rem;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
 /* End of Main Section E */

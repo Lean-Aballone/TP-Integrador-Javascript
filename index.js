@@ -4,14 +4,7 @@ const UL  = document.querySelector("#mob");
 const nav2_Child_extra = document.querySelectorAll(".close_extra");
 const CROSS = document.querySelectorAll(".cross");
 
-/* CROSS.forEach((element) => (element.classList.toggle("nav2_opened")));
-CROSS[0].classList.toggle("cross_one");
-CROSS[1].classList.toggle("cross_two"); */
 
-/* let cierre = function(){
-    nav2_Child_extra.classList.toggle("nav2_closed");
-}
- */
 let first_time = true;
 NAV_BUTTON.addEventListener("click",function(){
     nav2_Child_extra.forEach((element) => (element.classList.toggle("nav2_opened")));

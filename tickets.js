@@ -1,9 +1,9 @@
 function CalcularDescuento(categoria, TICKET){
-    let cant = Number(document.querySelector("#cantidad").value);
+    let cant = parseInt(document.querySelector("#cantidad").value);
 
     if (cant > 99 || cant <= 0) {
         document.querySelector("#cantidad").value = 1;
-        cant = Number(document.querySelector("#cantidad").value);
+        cant = parseInt(document.querySelector("#cantidad").value);
     }
 
     const DEST_ESTUDIANTE = 80 / 100;
